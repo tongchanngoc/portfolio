@@ -1,53 +1,73 @@
-import * as Utils from "./utils.js";
+// Modern Portfolio JavaScript
+document.addEventListener('DOMContentLoaded', () => {
+  // Navbar scroll effect
+  const navbar = document.getElementById('navbar');
+  
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 50) {
+      navbar.classList.add('scrolled');
+    } else {
+      navbar.classList.remove('scrolled');
+    }
+  });
 
-function setupReveal() {
-  const observer = new IntersectionObserver(
-    (entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add("active");
-        }
-      });
-    },
-    { threshold: 0.1 }
-  );
+  // Active nav link on scroll
+  const sections = document.querySelectorAll('section[id]');
+  const navLinks = document.querySelectorAll('.nav-link');
 
-  document.querySelectorAll(".reveal").forEach((el) => observer.observe(el));
-}
+  function highlightNav() {
+    const scrollY = window.pageYOffset;
 
-function handleNavigation() {
-  const sections = document.querySelectorAll("section");
-  const navLinks = document.querySelectorAll("nav a");
+    sections.forEach(section => {
+      const sectionHeight = section.offsetHeight;
+      const sectionTop = section.offsetTop - 100;
+      const sectionId = section.getAttribute('id');
+      
+      if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
+        navLinks.forEach(link => {
+          link.classList.remove('active');
+          if (link.getAttribute('href') === `#${sectionId}`) {
+            link.classList.add('active');
+          }
+        });
+      }
+    });
+  }
 
-  window.addEventListener("scroll", () => {
-    let position = window.scrollY + 200;
+  window.addEventListener('scroll', highlightNav);
 
-    sections.forEach((sec) => {
-      if (
-        position >= sec.offsetTop &&
-        position < sec.offsetTop + sec.offsetHeight
-      ) {
-        let id = sec.getAttribute("id");
-        navLinks.forEach((a) => {
-          a.classList.toggle("active", a.getAttribute("href") === `#${id}`);
+  // Smooth scroll for anchor links
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+      e.preventDefault();
+      const target = document.querySelector(this.getAttribute('href'));
+      if (target) {
+        const offsetTop = target.offsetTop - 80;
+        window.scrollTo({
+          top: offsetTop,
+          behavior: 'smooth'
         });
       }
     });
   });
-}
 
-function init() {
-  setupReveal();
-  handleNavigation();
+  // Intersection Observer for fade-in animations
+  const observerOptions = {
+    threshold: 0.1,
+    rootMargin: '0px 0px -50px 0px'
+  };
 
-  if (Utils.isProduction()) {
-    Utils.enableContentProtection();
-  }
-}
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('fade-in-up');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, observerOptions);
 
-// Ensure the page starts at the top on reload
-window.onbeforeunload = function () {
-  window.scrollTo(0, 0);
-};
-
-document.addEventListener("DOMContentLoaded", init);
+  // Observe skill cards, experience cards, and contact cards
+  document.querySelectorAll('.skill-card, .experience-card, .contact-card').forEach(el => {
+    observer.observe(el);
+  });
+});

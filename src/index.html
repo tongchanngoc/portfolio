@@ -1,187 +1,234 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Song Chan Ngoc - Manual Tester Portfolio</title>
-    <link rel="icon" href="/favicon.ico" />
-    <link rel="stylesheet" href="assets/css/style.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Anonymous+Pro:ital,wght@0,400;0,700;1,400;1,700&family=Bebas+Neue&family=Outfit:wght@300;400;600;700&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
-      rel="stylesheet"
-    />
-  </head>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Song Chan Ngoc - Manual Tester & QA Specialist</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#home" class="nav-brand">SCN</a>
+      <ul class="nav-menu">
+        <li><a href="#home" class="nav-link active">Home</a></li>
+        <li><a href="#skills" class="nav-link">Skills</a></li>
+        <li><a href="#experience" class="nav-link">Experience</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
 
-  <body>
-    <!-- Navigation -->
-    <header>
-      <nav>
-        <ul class="bebas-neue-regular">
-          <li><a href="#hero">Home</a></li>
-          <li><a href="#skills">Skills</a></li>
-          <li><a href="#experience">Experience</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </nav>
-    </header>
-
-    <!-- Hero Section -->
-    <section id="hero">
+  <!-- Hero Section -->
+  <section id="home" class="hero">
+    <div class="container">
       <div class="hero-content">
-        <img
-          src="assets/images/profile.png"
-          alt="Song Chan Ngoc"
-          class="profile-img"
-        />
-        <h1 class="bebas-neue-regular">
-          Hello, &nbsp;I'm &nbsp; <span class="dev-name">Song Chan Ngoc</span>
-        </h1>
-        <div style="margin-bottom: 1.5rem;">
-          <span style="font-size: 1.5rem; font-weight: 300; color: var(--text-color);">Manual Tester &nbsp;|&nbsp; Quality Assurance &nbsp;|&nbsp; </span>
-          <div class="string">
-            <h1 class="role">API Testing</h1>
-            <h1 class="role">Web & Mobile</h1>
-            <h1 class="role">Agile/Scrum</h1>
+        <div class="hero-text">
+          <h1>Song Chan Ngoc</h1>
+          <p class="hero-subtitle">Manual Tester & QA Specialist</p>
+          <p class="hero-description">
+            Dedicated Manual Tester specializing in Web & Mobile QA with expertise in API Testing, 
+            SQL Database validation, and Agile methodologies. Committed to delivering high-quality 
+            software through meticulous testing and comprehensive quality assurance processes.
+          </p>
+          <div class="hero-cta">
+            <a href="#contact" class="btn btn-primary">
+              <i class="fas fa-envelope"></i>
+              Get In Touch
+            </a>
+            <a href="#experience" class="btn btn-outline">
+              <i class="fas fa-briefcase"></i>
+              View Experience
+            </a>
           </div>
         </div>
-        <p style="margin-top: 1.5rem; max-width: 800px; margin-left: auto; margin-right: auto; line-height: 1.8;">
-          I am a dedicated Manual Tester with a focus on ensuring software quality through meticulous testing processes.
-          I specialize in Functional, Integration, System, and UAT testing, with experience in both Web and Mobile platforms.
-          I am proficient in using tools like Postman, Swagger, JMeter, and DBeaver to deliver robust and reliable products.
-        </p>
-        <div class="btn-row">
-          <a href="#experience" class="btn">View Experience</a>
-          <a href="mailto:tongchanngoc@gmail.com" class="btn" style="background: linear-gradient(45deg, var(--primary-color), var(--secondary-color)); border: none;">
-            <i class="fas fa-paper-plane"></i>&nbsp; Hire Me
+        <div class="hero-image">
+          <img src="assets/images/profile.jpg" alt="Song Chan Ngoc" class="profile-image">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section id="skills">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Professional Skills</h2>
+        <p class="section-subtitle">Expertise in Quality Assurance & Testing</p>
+      </div>
+      
+      <div class="skills-grid">
+        <div class="skill-card">
+          <div class="skill-card-header">
+            <div class="skill-icon">
+              <i class="fas fa-vial"></i>
+            </div>
+            <h3>Testing Expertise</h3>
+          </div>
+          <div class="skill-tags">
+            <span class="skill-tag">Functional Testing</span>
+            <span class="skill-tag">Integration Testing</span>
+            <span class="skill-tag">System Testing</span>
+            <span class="skill-tag">UAT</span>
+            <span class="skill-tag">Regression Testing</span>
+            <span class="skill-tag">Smoke Testing</span>
+            <span class="skill-tag">UI/UX Testing</span>
+          </div>
+        </div>
+
+        <div class="skill-card">
+          <div class="skill-card-header">
+            <div class="skill-icon">
+              <i class="fas fa-tools"></i>
+            </div>
+            <h3>Technical Tools</h3>
+          </div>
+          <div class="skill-tags">
+            <span class="skill-tag">Postman</span>
+            <span class="skill-tag">Swagger</span>
+            <span class="skill-tag">SQL / DBeaver</span>
+            <span class="skill-tag">JMeter</span>
+            <span class="skill-tag">Redmine</span>
+            <span class="skill-tag">Java Basics</span>
+            <span class="skill-tag">HTML Basics</span>
+          </div>
+        </div>
+
+        <div class="skill-card">
+          <div class="skill-card-header">
+            <div class="skill-icon">
+              <i class="fas fa-cogs"></i>
+            </div>
+            <h3>Methodologies</h3>
+          </div>
+          <div class="skill-tags">
+            <span class="skill-tag">Agile / Scrum</span>
+            <span class="skill-tag">Test Planning</span>
+            <span class="skill-tag">BRD/SRS Analysis</span>
+            <span class="skill-tag">Test Case Design</span>
+            <span class="skill-tag">Bug Management</span>
+            <span class="skill-tag">Team Mentoring</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Experience Section -->
+  <section id="experience">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Work Experience</h2>
+        <p class="section-subtitle">Professional Journey in Quality Assurance</p>
+      </div>
+
+      <div class="experience-timeline">
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="experience-card">
+            <div class="experience-header">
+              <h3 class="company-name">Cyllenge Asia Pacific</h3>
+              <p class="job-title">Manual Tester</p>
+            </div>
+            <ul class="experience-details">
+              <li>Managed end-to-end testing for Web and Mobile applications across multiple environments</li>
+              <li>Analyzed business and technical requirements from BRD, SRS, and User Stories</li>
+              <li>Designed and maintained comprehensive Test Scenarios, Test Cases, and Checklists</li>
+              <li>Executed Functional, Integration, System, UAT, Regression, and Smoke testing</li>
+              <li>Performed API testing using Postman and Swagger</li>
+              <li>Conducted database testing and validation using SQL with DBeaver</li>
+              <li>Collaborated closely with BA, Developers, and Project Managers in Agile/Scrum environment</li>
+              <li>Participated in Sprint Planning, Daily Standups, Reviews, and Retrospectives</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="experience-card">
+            <div class="experience-header">
+              <h3 class="company-name">Innochee</h3>
+              <p class="job-title">Manual Tester & BPO Specialist</p>
+            </div>
+            <ul class="experience-details">
+              <li>Created and reviewed Test Cases based on technical specifications</li>
+              <li>Executed comprehensive testing including Functional, Integration, System, UAT, and Regression</li>
+              <li>Performed API testing with Postman/Swagger and database validation with SQL/DBeaver</li>
+              <li>Tested Web and Mobile applications across multiple devices, browsers, and emulators</li>
+              <li>Mentored and guided junior testers to improve team capabilities</li>
+              <li>Managed Japanese data entry for online reporting systems (BPO role)</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="experience-card">
+            <div class="experience-header">
+              <h3 class="company-name">Frontier Freaks</h3>
+              <p class="job-title">Data Entry & Photo Editor</p>
+            </div>
+            <ul class="experience-details">
+              <li>Performed Japanese data entry in Excel with high accuracy</li>
+              <li>Edited and optimized images using Photoshop and Illustrator</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="contact-section">
+    <div class="container">
+      <div class="contact-content">
+        <div class="section-header">
+          <h2 class="section-title">Get In Touch</h2>
+          <p class="section-subtitle">
+            Available for new opportunities in Manual Testing and Quality Assurance. 
+            Let's discuss how I can contribute to your team's success.
+          </p>
+        </div>
+
+        <div class="contact-methods">
+          <a href="mailto:tongchanngoc@gmail.com" class="contact-card">
+            <div class="contact-icon">
+              <i class="fas fa-envelope"></i>
+            </div>
+            <h3>Email</h3>
+            <p>tongchanngoc@gmail.com</p>
+          </a>
+
+          <a href="tel:0981835406" class="contact-card">
+            <div class="contact-icon">
+              <i class="fas fa-phone"></i>
+            </div>
+            <h3>Phone</h3>
+            <p>0981835406</p>
+          </a>
+        </div>
+
+        <div class="social-links">
+          <a href="#" class="social-link" aria-label="LinkedIn">
+            <i class="fab fa-linkedin-in"></i>
+          </a>
+          <a href="#" class="social-link" aria-label="GitHub">
+            <i class="fab fa-github"></i>
           </a>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <hr class="section-divider" />
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <p>&copy; 2026 Song Chan Ngoc. Manual Tester & QA Specialist. All rights reserved.</p>
+    </div>
+  </footer>
 
-    <!-- Skills Section -->
-    <section id="skills" class="reveal">
-      <h2 class="center-text bebas-neue-regular section-header">Professional Skills</h2>
-      
-      <div class="skill-category">
-        <div class="skill-list">
-          <span>Phân tích BRD/SRS/User Story</span>
-          <span>Test Scenario & Case Design</span>
-          <span>Manual Testing (Functional, Integration, System, UAT)</span>
-          <span>Regression & Smoke Testing</span>
-          <span>UI/UX Testing</span>
-        </div>
-      </div>
-
-      <div class="skill-category">
-        <div class="skill-list" style="margin-top: 20px;">
-          <span>API Testing (Postman/Swagger)</span>
-          <span>Database Testing (SQL, DBeaver)</span>
-          <span>Web & Mobile App Testing</span>
-          <span>Performance Test (JMeter)</span>
-          <span>Agile/Scrum</span>
-        </div>
-      </div>
-
-      <div class="skill-category">
-        <div class="skill-list" style="margin-top: 20px;">
-          <span>Estimate & Test Planning</span>
-          <span>Review Test Case</span>
-          <span>Redmine Bug Management</span>
-          <span>Java & HTML Basics</span>
-          <span>Team Mentoring & Support</span>
-        </div>
-      </div>
-    </section>
-
-    <hr class="section-divider" />
-
-    <!-- Experience Section -->
-    <section id="experience" class="reveal">
-      <h2 class="center-text bebas-neue-regular section-header">Work Experience</h2>
-
-      <!-- Cyllenge Asia Pacific -->
-      <div class="experience-card">
-        <div class="company-name bebas-neue-regular">Cyllenge Asia Pacific</div>
-        <span class="job-title">Manual Tester</span>
-        <ul class="job-details">
-          <li>Chịu trách nhiệm estimate khối lượng và thời gian test cho từng task.</li>
-          <li>Phân tích yêu cầu nghiệp vụ và kỹ thuật từ BRD, SRS, User Story.</li>
-          <li>Thiết kế, review và quản lý Test Scenario, Test Case, Checklist.</li>
-          <li>Thực hiện các hoạt động kiểm thử: Functional, Integration, System, UAT, Regression & Smoke test.</li>
-          <li>Phát hiện, báo cáo và quản lý bug trên Redmine.</li>
-          <li>Kiểm thử API bằng Postman và Swagger.</li>
-          <li>Thực hiện database testing bằng SQL với DBeaver.</li>
-          <li>Kiểm thử Web trên nhiều môi trường.</li>
-          <li>Phối hợp chặt chẽ với Leader, BA và Developer để xác nhận yêu cầu và verify bug fix.</li>
-          <li>Tham gia đầy đủ các hoạt động Agile/Scrum: Sprint Planning, Daily, Review, Retrospective.</li>
-        </ul>
-      </div>
-
-      <!-- Innochee -->
-      <div class="experience-card">
-        <div class="company-name bebas-neue-regular">Innochee</div>
-        <span class="job-title">Manual Tester & BPO</span>
-        <ul class="job-details">
-          <li><strong>Manual Tester:</strong> Thiết kế, review và quản lý Test Scenario & Test Case dựa trên tài liệu kỹ thuật.</li>
-          <li>Thực hiện các hoạt động kiểm thử: Functional, Integration, System, UAT, Regression & Smoke test.</li>
-          <li>Kiểm thử API (Postman/Swagger) và Database (SQL/DBeaver).</li>
-          <li>Kiểm thử Web và Mobile Application trên nhiều môi trường, device, emulation.</li>
-          <li>Hướng dẫn, mentor tester mới.</li>
-          <li><strong>BPO:</strong> Nhập data tiếng Nhật tạo báo online.</li>
-        </ul>
-      </div>
-
-      <!-- Frontier Freaks -->
-      <div class="experience-card">
-        <div class="company-name bebas-neue-regular">Frontier Freaks</div>
-        <span class="job-title">Data Entry & Photo Editor</span>
-        <ul class="job-details">
-          <li>Nhập dữ liệu tiếng Nhật vào Excel.</li>
-          <li>Chỉnh sửa hình ảnh bằng Photoshop, Illustrator.</li>
-        </ul>
-      </div>
-    </section>
-
-    <hr class="section-divider" />
-
-    <!-- Contact Section -->
-    <section id="contact" class="reveal">
-      <h2 class="center-text bebas-neue-regular section-header">Contact Me</h2>
-      <p style="max-width: 600px; margin-bottom: 2rem; color: var(--text-muted);">
-        Available for new opportunities in Manual Testing and Quality Assurance. 
-        Feel free to reach out via email or phone.
-      </p>
-      
-      <div style="display: flex; flex-direction: column; gap: 1rem; align-items: center; width: 100%;">
-        <a href="mailto:tongchanngoc@gmail.com" class="btn" style="width: fit-content; min-width: 320px;">
-          <i class="fas fa-envelope"></i>&nbsp; tongchanngoc@gmail.com
-        </a>
-        <a href="tel:0981835406" class="btn" style="width: fit-content; min-width: 320px;">
-          <i class="fas fa-phone"></i>&nbsp; 0981835406
-        </a>
-      </div>
-
-      <div style="margin-top: 3rem;">
-        <p>
-          <a href="#" target="_blank" style="color: var(--text-color); text-decoration: none;"><i class="fab fa-linkedin"></i> LinkedIn</a>
-          &nbsp;&nbsp;|&nbsp;&nbsp;
-          <a href="#" target="_blank" style="color: var(--text-color); text-decoration: none;"><i class="fab fa-github"></i> GitHub</a>
-        </p>
-      </div>
-    </section>
-
-    <footer>
-      <p>© 2026 Developed for Song Chan Ngoc. Built with passion.</p>
-    </footer>
-
-    <script src="assets/js/index.js" type="module"></script>
-  </body>
+  <script src="assets/js/index.js" type="module"></script>
+</body>
 </html>
